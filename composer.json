@@ -1,0 +1,37 @@
+{
+    "name": "tschallacka/storm-database",
+    "description": "The WinterCMS Storm library but only the database features",
+    "version": "1.0",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "meyfa/phpunit-assert-gd": "^3.0"
+    },
+    "autoload": {
+        
+        "psr-4": {
+            "Winter\\Storm\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php",
+            "tests/DbTestCase.php"
+        ]
+    },
+    "scripts": {
+        "test": [
+            "phpunit ./tests --stop-on-failure"
+        ]
+    },	
+    "license": "MIT",
+    "require": {
+        "illuminate/database": "^8.38",
+        "symfony/mime": "^5.2",
+        "symfony/http-foundation": "^5.1.4",
+        "illuminate/events": "^8.38",
+        "illuminate/encryption": "^8.38",
+        "illuminate/translation": "^8.38",
+        "illuminate/validation": "^8.38"
+    }
+}
