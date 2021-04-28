@@ -1,6 +1,6 @@
-<?php namespace Winter\Storm\Support;
+<?php namespace Winter\Storm\Database;
 
-use Illuminate\Support\Collection as CollectionBase;
+use Illuminate\Database\Eloquent\Collection as CollectionBase;
 
 /**
  * Proxy class.

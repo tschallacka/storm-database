@@ -1,0 +1,14 @@
+#!/bin/sh
+rm -rf src
+mkdir src
+mkdir src/Support 
+cp -H -R symlinks/Argon src/ 
+cp -H -R symlinks/Database src/ 
+cp -H -R symlinks/Events src/ 
+cp -H -R symlinks/Extension src/ 
+cp -H -R symlinks/Translation src/ 
+cp -H -R symlinks/Validation src/ 
+cp -H -R symlinks/Support/Traits /rc/Support 
+cp -H -R symlinks/Support/Arr.php src/Support 
+cp -H -R symlinks/Support/Collection.php src/Support 
+cp -H -R symlinks/Support/Str.php src/Support
