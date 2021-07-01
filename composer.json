@@ -21,9 +21,12 @@
     },
     "scripts": {
         "test": [
-            "phpunit ./tests --stop-on-failure"
+            "phpunit -c tests/phpunit.xml --stop-on-failure"
+        ],
+        "update-from-source": [
+            "[ $COMPOSER_DEV_MODE -eq 0 ] || bash bin/sync.sh"
         ]
-    },	
+    },
     "license": "MIT",
     "require": {
         "illuminate/database": "^8.38",
