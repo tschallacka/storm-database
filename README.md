@@ -14,4 +14,8 @@ Currently this uses a branch for migrating to laravel 8 in a newer version, but 
 
 ## Contributing
 
-In the folder storm
+Run the command composer update-from-source to update the files from the source.  
+Currently it pulls from my private branch on https://github.com/tschallacka/storm/tree/remove_helper_calls  
+
+Feel free to modify bin/sync.sh to suit your needs.
+
