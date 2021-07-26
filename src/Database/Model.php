@@ -299,7 +299,8 @@ class Model extends EloquentModel
         /**
          * @event model.beforeSave
          * Called before the model is saved
-         * > **Note:** This is called both when creating and updating and is also triggered in Winter\Storm\Halcyon\Model
+         * > **Note:** This is called both when creating and updating
+         * > **Note:** also triggered in Winter\Storm\Halcyon\Model
          *
          * Example usage:
          *
@@ -320,7 +321,8 @@ class Model extends EloquentModel
         /**
          * @event model.afterSave
          * Called after the model is saved
-         * > **Note:** This is called both when creating and updating and is also triggered in Winter\Storm\Halcyon\Model
+         * > **Note:** This is called both when creating and updating
+         * > **Note:** also triggered in Winter\Storm\Halcyon\Model
          *
          * Example usage:
          *
@@ -580,10 +582,10 @@ class Model extends EloquentModel
         // which doesn't support sending micro or milliseconds
         // @see https://github.com/rainlab/blog-plugin/issues/334
         if (str_contains($format, '.') && !str_contains($value, '.')) {
-            if (Str::endsWith($format, '.u')) {
+            if (ends_with($format, '.u')) {
                 $value .= '.000000';
             }
-            if (Str::endsWith($format, '.v')) {
+            if (ends_with($format, '.v')) {
                 $value .= '.000';
             }
         }

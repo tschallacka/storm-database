@@ -6,10 +6,10 @@ use Input;
 use Lang;
 use Illuminate\Contracts\Validation\Rule;
 use Winter\Storm\Support\Arr;
-use Winter\Storm\Support\Str;
 use Winter\Storm\Support\Facades\Validator;
 use Illuminate\Support\MessageBag;
 use Winter\Storm\Database\ModelException;
+use Winter\Storm\Support\Str;
 
 trait Validation
 {
@@ -383,7 +383,7 @@ trait Validation
                 /*
                  * Remove primary key unique validation rule if the model already exists
                  */
-                if (($rulePart === 'unique' || Str::startsWith($rulePart, 'unique:'))) {
+                if (($rulePart === 'unique' || Str::startsWith($rulePart, 'unique:')) && $this->exists) {
                     $ruleParts[$key] = $this->processValidationUniqueRule($rulePart, $field);
                 }
                 /*
@@ -449,10 +449,6 @@ trait Validation
         $table = 'unique:' . $this->getConnectionName()  . '.' . $this->getTable();
         $column = $column ?: $fieldName;
         $key = $keyName ? $this->$keyName : $this->getKey();
-        if (is_null($key)) {
-            $key = 'NULL';
-        }
-
         $keyName = $keyName ?: $this->getKeyName();
 
         $params = [$table, $column, $key, $keyName];

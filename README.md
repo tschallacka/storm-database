@@ -2,6 +2,8 @@
 
 This is a individual fork of the [Storm Library](https://github.com/wintercms/storm) for WinterCMS that adds solely the database features and removes the rest of the features that that library offers.
 
+You are now looking at the laravel-6 symfony 3 compatability module branch( < v 1.0 )
+
 This way you can have a lean library for snazzy database models in independent projects, without needing all the other wintercms dependent features that the storm library offers.
 
 For documentation refer to [https://wintercms.com/docs/database/model]

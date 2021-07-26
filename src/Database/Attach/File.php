@@ -5,12 +5,11 @@ use Cache;
 use Storage;
 use File as FileHelper;
 use Winter\Storm\Network\Http;
-use Winter\Storm\Support\Arr;
-use Winter\Storm\Support\Str;
 use Winter\Storm\Database\Model;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\File\File as FileObj;
 use Exception;
+use Winter\Storm\Support\Arr;
 
 /**
  * File attachment model
@@ -30,7 +29,9 @@ class File extends Model
      * Relations
      */
     public $morphTo = [
-        'attachment' => [],
+        'attachment' => [
+            'keyType' => 'string'
+        ],
     ];
 
     /**

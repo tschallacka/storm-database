@@ -1,8 +1,8 @@
 <?php namespace Winter\Storm\Database\Traits;
 
-use Winter\Storm\Support\Arr;
 use App;
 use Exception;
+use Winter\Storm\Support\Arr;
 
 trait Encryptable
 {
@@ -11,6 +11,11 @@ trait Encryptable
      *
      * protected $encryptable = [];
      */
+
+    /**
+     * @var \Illuminate\Contracts\Encryption\Encrypter Encrypter instance.
+     */
+    protected $encrypter;
 
     /**
      * @var array List of original attribute values before they were encrypted.
@@ -104,10 +109,7 @@ trait Encryptable
      */
     public function getEncrypter()
     {
-        if (is_null(self::$encrypter)) {
-            $this->setEncrypter(App::make('encrypter'));
-        }
-        return self::$encrypter;
+        return (!is_null($this->encrypter)) ? $this->encrypter : App::make('encrypter');
     }
 
     /**
@@ -118,6 +120,6 @@ trait Encryptable
      */
     public function setEncrypter(\Illuminate\Contracts\Encryption\Encrypter $encrypter)
     {
-        parent::encryptUsing($encrypter);
+        $this->encrypter = $encrypter;
     }
 }

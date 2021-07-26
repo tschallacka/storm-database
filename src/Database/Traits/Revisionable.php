@@ -1,10 +1,10 @@
 <?php namespace Winter\Storm\Database\Traits;
 
-use Winter\Storm\Support\Arr;
 use Db;
 use Exception;
 use DateTime;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
+use Winter\Storm\Support\Arr;
 
 trait Revisionable
 {

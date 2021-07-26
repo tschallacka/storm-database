@@ -1,11 +1,11 @@
 <?php namespace Winter\Storm\Database;
 
-use Winter\Storm\Support\Arr;
 use Db;
 use Str;
 use Closure;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Exception;
+use Winter\Storm\Support\Arr;
 
 /**
  * Model Data Feed class.

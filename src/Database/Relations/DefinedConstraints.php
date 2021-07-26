@@ -1,7 +1,7 @@
 <?php namespace Winter\Storm\Database\Relations;
 
-use Winter\Storm\Support\Arr;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany as BelongsToManyBase;
+use Winter\Storm\Support\Arr;
 
 /*
  * Handles the constraints and filters defined by a relation.
@@ -77,7 +77,7 @@ trait DefinedConstraints
     /**
      * Add query based constraints.
      *
-     * @param \Winter\Storm\Database\QueryBuilder $query
+     * @param Winter\Storm\Database\QueryBuilder $query
      * @param array $args
      */
     public function addDefinedConstraintsToQuery($query, $args = null)

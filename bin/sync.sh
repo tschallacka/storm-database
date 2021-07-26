@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 echo "Removing src"
 if [ ! -d storm ]; then
-    echo "cloning base storm library"
-    git clone https://github.com/tschallacka/storm.git
+    echo "cloning base storm library, with laravel 6 support"
+    git clone https://github.com/wintercms/storm
 fi
 echo "Pulling latest versions"
 cd storm
-git checkout remove_helper_calls
+git checkout 1.1
 git pull
 cd ..
 echo "Creating target directories"
