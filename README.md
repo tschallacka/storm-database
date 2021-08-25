@@ -42,3 +42,11 @@ Currently it pulls from my private branch on https://github.com/tschallacka/stor
 
 Feel free to modify bin/sync.sh to suit your needs.
 
+## Libraries using this to inject Eloquent in non Eloquent frameworks
+
+### Magento
+
+[Mage Storm](https://github.com/tschallacka/mage-storm)
+Registers as a plugin within Magento 2.4 and then reads the app/etc/env.php file to glean the communication details so easy Eloquent access is possible within Magento 2.4
+
+
