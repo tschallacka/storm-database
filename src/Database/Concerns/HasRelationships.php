@@ -455,7 +455,7 @@ trait HasRelationships
         $instance = $this->newRelatedInstance($related);
 
         if (is_null($foreignKey)) {
-            $foreignKey = snake_case($relationName).'_id';
+            $foreignKey = Str::snake($relationName).'_id';
         }
 
         $parentKey = $parentKey ?: $instance->getKeyName();
