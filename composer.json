@@ -8,10 +8,12 @@
         "meyfa/phpunit-assert-gd": "^3.0"
     },
     "autoload": {
-        
         "psr-4": {
             "Winter\\Storm\\": "src/"
-        }
+        },
+        "classmap": [
+            "src/"
+        ]
     },
     "autoload-dev": {
         "classmap": [
@@ -35,6 +37,7 @@
         "illuminate/events": "^8.38",
         "illuminate/encryption": "^8.38",
         "illuminate/translation": "^8.38",
-        "illuminate/validation": "^8.38"
+        "illuminate/validation": "^8.38",
+        "laravel-zero/foundation": "^8.55"
     }
 }

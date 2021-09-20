@@ -1,12 +1,13 @@
 # Composer files
 /vendor
 composer.phar
-composer.lock
+composer.lock.backup
 /storm
 tests/.phpunit.result.cache
 # Editor files
 .idea
 .vscode
+composer.lock
 
 # Other files
 .DS_Store

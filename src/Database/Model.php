@@ -147,6 +147,7 @@ class Model extends EloquentModel
             return;
         }
 
+
         $radicals = ['creat', 'sav', 'updat', 'delet', 'fetch'];
         $hooks = ['before' => 'ing', 'after' => 'ed'];
 
