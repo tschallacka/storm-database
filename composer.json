@@ -38,6 +38,10 @@
         "illuminate/translation": "^8.38",
         "illuminate/validation": "^8.38",
         "laravel-zero/foundation": "^8.55",
-        "illuminate/log": "^8.61"
+        "illuminate/log": "^8.61",
+        "illuminate/redis": "^8.0",
+        "illuminate/filesystem": "^8.0",
+        "illuminate/hashing": "^8.0",
+        "illuminate/cache": "^8.0"
     }
 }
