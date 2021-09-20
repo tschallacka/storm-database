@@ -38,6 +38,7 @@
         "illuminate/encryption": "^8.38",
         "illuminate/translation": "^8.38",
         "illuminate/validation": "^8.38",
-        "laravel-zero/foundation": "^8.55"
+        "laravel-zero/foundation": "^8.55",
+        "illuminate/log": "^8.61"
     }
 }

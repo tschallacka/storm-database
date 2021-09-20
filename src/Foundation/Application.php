@@ -1,6 +1,7 @@
 <?php namespace Winter\Storm\Foundation;
 
 use Winter\Storm\Support\Str;
+use Illuminate\Support\Facades\Config;
 use Closure;
 use Throwable;
 use Illuminate\Filesystem\Filesystem;
@@ -8,9 +9,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Foundation\Application as ApplicationBase;
 use Illuminate\Foundation\PackageManifest;
 use Illuminate\Foundation\ProviderRepository;
-use Symfony\Component\Debug\Exception\FatalErrorException;
 use Winter\Storm\Events\EventServiceProvider;
-use Winter\Storm\Router\RoutingServiceProvider;
 use Winter\Storm\Filesystem\PathResolver;
 use Winter\Storm\Foundation\Providers\LogServiceProvider;
 use Winter\Storm\Foundation\Providers\MakerServiceProvider;
@@ -96,8 +95,6 @@ class Application extends ApplicationBase
         $this->register(new EventServiceProvider($this));
 
         $this->register(new LogServiceProvider($this));
-
-        $this->register(new RoutingServiceProvider($this));
 
         $this->register(new MakerServiceProvider($this));
 
@@ -333,7 +330,7 @@ class Application extends ApplicationBase
      */
     public function fatal(Closure $callback)
     {
-        $this->error(function (FatalErrorException $e) use ($callback) {
+        $this->error(function (\ErrorException $e) use ($callback) {
             return call_user_func($callback, $e);
         });
     }
