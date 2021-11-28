@@ -42,6 +42,7 @@
         "illuminate/redis": "^8.0",
         "illuminate/filesystem": "^8.0",
         "illuminate/hashing": "^8.0",
-        "illuminate/cache": "^8.0"
+        "illuminate/cache": "^8.0",
+        "illuminate/queue": "^8.0"
     }
 }
